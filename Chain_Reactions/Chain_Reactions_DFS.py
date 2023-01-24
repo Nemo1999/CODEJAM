@@ -4,7 +4,7 @@ def findMaxFuns(parent, childrens, Fs, r):
     if len(childrens[r]) == 0:
         return Fs[r-1]
     subProbs = list(findMaxFuns(parent, childrens, Fs , ch) for ch in childrens[r])
-    return sum(subProbs) - min(subProbs) + max(Fs[r-1], min(subProbs))
+    return sum(subProbs) - min(subProbs) + max(Fs[r-1], min(soubProbs))
 
 def solve(N, Fs, Ps):
     childrens = defaultdict(set)
